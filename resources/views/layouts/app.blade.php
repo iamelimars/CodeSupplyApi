@@ -54,10 +54,10 @@
                                 Categories<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="">All</a></li>
-                                <li><a href="">Frontend</a></li>
-                                <li><a href="">Backend</a></li>
-                                <li><a href="">Fullstack</a></li>
+                                <li><a href="{{ route('category.show', $post->id) }}">All</a></li>
+                                <li><a href="{{ route('category.show', 1) }}">Frontend</a></li>
+                                <li><a href="{{ route('category.show', 2) }}">Backend</a></li>
+                                <li><a href="{{ route('category.show', 3) }}">Fullstack</a></li>
                             </ul>
                         </li>
                         <!-- Authentication Links -->
@@ -91,6 +91,8 @@
         </nav>
 
         @yield('content')
+
+        <div class="clearfix"></div>
 
         <div class="" id="footer">
             <div class="container">

@@ -55,8 +55,20 @@ body {
 
 #content-container {
   margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 0;
+  padding-bottom: 100px;
   background: white;
   box-shadow: 0 1px 5px #dcdcdc;
+  img {
+    width: 100%;
+  }
+  pre {
+    border-radius: 0px;
+    border-color: transparent;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 .navbar-default {
   //background-color: transparent;

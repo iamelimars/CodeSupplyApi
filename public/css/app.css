@@ -8401,9 +8401,23 @@ body {
 
 #content-container {
   margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 0;
+  padding-bottom: 100px;
   background: white;
   -webkit-box-shadow: 0 1px 5px #dcdcdc;
           box-shadow: 0 1px 5px #dcdcdc;
+}
+
+#content-container img {
+  width: 100%;
+}
+
+#content-container pre {
+  border-radius: 0px;
+  border-color: transparent;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .navbar-default {
