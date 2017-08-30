@@ -18,6 +18,8 @@ Route::get('/', 'PostController@listPosts')->name('post.listPosts');
 
 Auth::routes();
 
+
+
 Route::get('/post/{id}', 'PostController@show')->name('post.show');
 
 Route::get('/category/{id}', 'CategoryController@show')->name('category.show');
@@ -27,6 +29,12 @@ Route::get('/recent', 'CategoryController@showRecent')->name('category.showRecen
 Route::get('/dashboard', 'PostController@index')->name('home');
 
 Route::post('/dashboard', 'PostController@store')->name('post.store');
+
+Route::get('/dashboard/tutorials', 'DashController@getTutorials')->name('dash.getTutorials');
+
+Route::get('/dashboard/new', 'DashController@newTutorial')->name('dash.newTutorial');
+
+Route::post('/dashboard/new', 'DashController@postTutorial')->name('dash.postTutorial');
 
 Auth::routes();
 

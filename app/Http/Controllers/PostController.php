@@ -34,12 +34,13 @@ class PostController extends Controller
     public function index()
     {
         if (Auth::check()) {
+						$posts = Post::orderBy('created_at', 'desc')->get();
             $categories = category::All();
-            return view('home')->with('categories', $categories);
+            return view('home')->with('categories', $categories)
+																->with('posts', $posts);
         } else {
             return redirect()->route('login');
         }
-
 
 
     }
@@ -172,7 +173,7 @@ class PostController extends Controller
 
         $response = [
           'post' => $singlePost,
-          'user' => $user  
+          'user' => $user
         ];
 
         return response()->json($response, 200);
@@ -193,7 +194,7 @@ class PostController extends Controller
 
         return response()->json(['post' => $post], 200);
 
-        
+
     }
 
     public function apiDeletePost($id) {

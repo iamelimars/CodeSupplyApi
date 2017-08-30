@@ -34,6 +34,9 @@
                     </button>
 
                     <!-- Branding Image -->
+                    {{-- test --}}
+
+
                     <a class="navbar-brand visible-xs" href="{{ url('/') }}">
                         CodeSupply
                     </a>
@@ -54,7 +57,7 @@
                                 Categories<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ route('category.show', $post->id) }}">All</a></li>
+                                <li><a href="{{ route('category.showRecent') }}">All</a></li>
                                 <li><a href="{{ route('category.show', 1) }}">Frontend</a></li>
                                 <li><a href="{{ route('category.show', 2) }}">Backend</a></li>
                                 <li><a href="{{ route('category.show', 3) }}">Fullstack</a></li>

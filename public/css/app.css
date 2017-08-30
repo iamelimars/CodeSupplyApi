@@ -8414,10 +8414,31 @@ body {
 }
 
 #content-container pre {
+  background: #525366;
   border-radius: 0px;
   border-color: transparent;
   margin-left: -15px;
   margin-right: -15px;
+}
+
+#content-container pre code {
+  text-shadow: none;
+}
+
+#content-container pre code .token.tag {
+  color: #f6a2a2;
+}
+
+#content-container pre code .token.attr-name {
+  color: #b8e986;
+}
+
+#content-container pre code .token.attr-value {
+  color: #F5D5A0;
+}
+
+.media img {
+  width: 200px;
 }
 
 .navbar-default {
@@ -8529,6 +8550,10 @@ body {
   color: black !important;
 }
 
+#items {
+  margin-bottom: 300px;
+}
+
 #items .thumbnail {
   background-color: white;
   border-color: white;
@@ -8610,6 +8635,54 @@ body {
   width: 100%;
   text-align: center;
   font-size: 14px;
+}
+
+#dash-sidebar {
+  background: #343c45;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+#dash-sidebar h1 {
+  padding-left: 9px;
+  font-weight: 100;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+#dash-sidebar .active {
+  color: white !important;
+}
+
+#dash-sidebar .menu-item {
+  background: #343c45;
+  min-width: 100%;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 30px;
+  height: 50px;
+}
+
+#dash-sidebar .menu-item a {
+  color: #636b6f;
+  line-height: 50px;
+}
+
+#dash-sidebar .menu-item a:hover {
+  text-decoration: none;
+}
+
+#dash-main {
+  background: #3e454e;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  overflow: scroll;
+}
+
+#dash-main h1 {
+  font-weight: 100;
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
 #admin-section #dash-brand {

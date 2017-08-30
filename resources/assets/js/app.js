@@ -23,6 +23,8 @@ const app = new Vue({
 
 
 $(document).ready(function() {
+  
+
     $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
         e.preventDefault();
         $(this).siblings('a.active').removeClass("active");

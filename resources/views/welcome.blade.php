@@ -10,31 +10,6 @@
 
         </div>
 
-        {{--<div id="categories">--}}
-            {{--<div class=" col-sm-3 hidden-xs">--}}
-                {{--<a href="" class="col-xs-12 active">ALL</a>--}}
-            {{--</div>--}}
-            {{--<div class=" col-sm-3 hidden-xs">--}}
-                {{--<a href="" class="col-xs-12">FRONTEND</a>--}}
-            {{--</div>--}}
-            {{--<div class=" col-sm-3 hidden-xs">--}}
-                {{--<a href="" class="col-xs-12">BACKEND</a>--}}
-            {{--</div>--}}
-            {{--<div class=" col-sm-3 hidden-xs">--}}
-                {{--<a href="" class="col-xs-12">FULLSTACK</a>--}}
-            {{--</div>--}}
-            {{--<div class="btn-group visible-xs col-xs-12">--}}
-              {{--<button type="button" class="btn btn-default dropdown-toggle col-xs-12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-                {{--CATEGORIES <span class="caret"></span>--}}
-              {{--</button>--}}
-              {{--<ul class="dropdown-menu col-xs-12">--}}
-                {{--<li><a href="#">ALL</a></li>--}}
-                {{--<li><a href="#">FRONTEND</a></li>--}}
-                {{--<li><a href="#">BACKEND</a></li>--}}
-                {{--<li><a href="#">FULLSTACK</a></li>--}}
-              {{--</ul>--}}
-            {{--</div>--}}
-        {{--</div>--}}
         <div id="recent-section" class="home-section">
             <h3>Most Recent Tutorials</h3>
             <div id="items">
@@ -43,11 +18,9 @@
                         <div class="col-sm-6 col-md-3">
                             <a href="{{route('post.show', $latestPost->id)}}">
                             <div class="thumbnail">
-                                <img src="http://via.placeholder.com/350x200" alt="...">
+                                <img src="{{ $latestPost->image_url }}" alt="...">
                                 <div class="caption">
-                                    <a href="{{route('post.show', $latestPost->id)}}"><h4 class="col-xs-12 text-center">{{ $latestPost->title }}</h4></a>
-                                    {{--<p>{{ $post->body }} </p>--}}
-                                    {{--<p><a href="#" class="btn btn-default" role="button">Button</a></p>--}}
+                                    <a href="{{route('post.show', $latestPost->id)}}">{{ $latestPost->title }}</a>
                                 </div>
                             </div>
                             </a>
@@ -71,9 +44,9 @@
                         <div class="col-sm-6 col-md-3">
                             <a href="{{route('post.show', $frontendPost->id)}}">
                             <div class="thumbnail">
-                                <img src="http://via.placeholder.com/350x200" alt="...">
+                                <img src="{{ $frontendPost->image_url }}" alt="...">
                                 <div class="caption">
-                                    <a href="{{route('post.show', $frontendPost->id)}}"><h4 class="col-xs-12 text-center">{{ $frontendPost->title }}</h4></a>
+                                    <a href="{{route('post.show', $frontendPost->id)}}">{{ $frontendPost->title }}</a>
                                     {{--<p>{{ $post->body }} </p>--}}
                                     {{--<p><a href="#" class="btn btn-default" role="button">Button</a></p>--}}
                                 </div>
@@ -97,11 +70,9 @@
                         <div class="col-sm-6 col-md-3">
                             <a href="{{route('post.show', $backendPost->id)}}">
                             <div class="thumbnail">
-                                <img src="http://via.placeholder.com/350x200" alt="...">
+                                <img src="{{ $backendPost->image_url }}" alt="...">
                                 <div class="caption">
-                                    <a href="{{route('post.show', $backendPost->id)}}"><h4 class="col-xs-12 text-center">{{ $backendPost->title }}</h4></a>
-                                    {{--<p>{{ $post->body }} </p>--}}
-                                    {{--<p><a href="#" class="btn btn-default" role="button">Button</a></p>--}}
+                                    <a href="{{route('post.show', $backendPost->id)}}">{{ $backendPost->title }}</a>
                                 </div>
                             </div>
                             </a>
@@ -122,11 +93,10 @@
                         <div class="col-sm-6 col-md-3">
                             <a href="{{route('post.show', $fullstackPost->id)}}">
                             <div class="thumbnail">
-                                <img src="http://via.placeholder.com/350x200" alt="...">
+                                <img src="{{$fullstackPost->image_url}}" alt="...">
                                 <div class="caption">
-                                    <a href="{{route('post.show', $fullstackPost->id)}}"><h4 class="col-xs-12 text-center">{{ $fullstackPost->title }}</h4></a>
-                                    {{--<p>{{ $post->body }} </p>--}}
-                                    {{--<p><a href="#" class="btn btn-default" role="button">Button</a></p>--}}
+                                    <a href="{{route('post.show', $fullstackPost->id)}}">{{ $fullstackPost->title }}</a>
+                                    
                                 </div>
                             </div>
                             </a>
@@ -139,6 +109,16 @@
             </div>
         </div>
         </div>
+        <script>
+  			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  			  ga('create', 'UA-105618306-1', 'auto');
+  			  ga('send', 'pageview');
+
+  			</script>
     </div>
     {{--<div id="about" class=" row col-xs-12">--}}
 

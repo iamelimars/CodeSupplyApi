@@ -4,11 +4,11 @@
 <div class="row" id="admin-section">
     {{-- <div class="col-sm-2" id="admin-panel">
         <h3 class="col-md-12 text-center">Admin Panel</h3>
-        
+
 
     </div> --}}
     {{-- <div class="col-sm-12" id="admin-dashboard">
-        
+
     </div> --}}
     <div class="col-sm-12 bhoechie-tab-container">
     {{-- <h3 class="col-md-12 text-center">Admin Panel</h3> --}}
@@ -34,7 +34,7 @@
                             </a></li>
                     </ul>
 
-                    
+
                     <div class="container">
                         <!-- Right Side Of Navbar -->
                         <ul class="nav navbar-nav navbar-right">
@@ -66,7 +66,7 @@
                         </ul>
                     </div>
 
-                    
+
                 </div>
             </div>
         </nav>
@@ -83,7 +83,7 @@
                       <h4 class="glyphicon glyphicon-plane"></h4><br/>Tutorials
                   </a>
                 <a href="#" class="list-group-item text-center">
-                  <h4 class="glyphicon glyphicon-home"></h4><br/>Adsense
+                  <h4 class="glyphicon glyphicon-home"></h4><br/>Analytics
                 </a>
               </div>
             </div>
@@ -95,6 +95,7 @@
                       <h2 class="col-xs-12 text-center" style="margin-top: 0;color:#55518a">New Tutorial</h2>
 
                       {!! Form::open(array('route' => 'post.store', 'files' => true)) !!}
+                      {{ csrf_field() }}
                             {{ Form::label('title', 'Title:') }}
                             {{ Form::text('title', null, array('class' => 'form-control')) }}
 
@@ -142,17 +143,42 @@
                 <div class="bhoechie-tab-content ">
                     <div>
                         <h2 style="margin-top: 0;color:#55518a">Tutorials</h2>
+                        @foreach ($posts as $post)
+                          <div class="media">
+                            <div class="media-left media-middle">
+                              <a href="#">
+                                <img class="media-object" src="{{ $post->image_url }}" alt="">
+                              </a>
+                            </div>
+                            <div class="media-body">
+                              <h4 class="media-heading">Middle aligned media</h4>
+                              ...
+                            </div>
+                          </div>
+                        @endforeach
+
                     </div>
                 </div>
-    
+
                 <!-- Adsense section -->
                 <div class="bhoechie-tab-content">
                     <div class="col-xs-center">
-                      <h2 class="col-xs-12 text-center" style="margin-top: 0;color:#55518a">Ad Sense</h2>
+                      {{-- <h2 class="col-xs-12 text-center" style="margin-top: 0;color:#55518a">Ad Sense</h2> --}}
+
                     </div>
                 </div>
 
             </div>
         </div>
+        <script>
+  			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  			  ga('create', 'UA-105618306-1', 'auto');
+  			  ga('send', 'pageview');
+
+  			</script>
 </div>
 @endsection
