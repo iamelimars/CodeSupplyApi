@@ -6,10 +6,12 @@ use Illuminate\Contracts\Filesystem\Filesystem;
 use App\category;
 use App\Post;
 use App\User;
+use Newsletter;
 use Illuminate\Database\Eloquent\paginate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+
 
 
 
@@ -34,10 +36,11 @@ class PostController extends Controller
     public function index()
     {
         if (Auth::check()) {
-						$posts = Post::orderBy('created_at', 'desc')->get();
-            $categories = category::All();
-            return view('home')->with('categories', $categories)
-																->with('posts', $posts);
+						// $posts = Post::orderBy('created_at', 'desc')->get();
+            // $categories = category::All();
+            // return view('home')->with('categories', $categories)
+						// 										->with('posts', $posts);
+						return redirect()->route('dash.getTutorials');
         } else {
             return redirect()->route('login');
         }
@@ -73,9 +76,6 @@ class PostController extends Controller
         $post = new Post;
         $s3 = Storage::disk('s3');
 
-
-
-
         if (Auth::check()) {
         	$post->author = Auth::id();
         }
@@ -106,6 +106,17 @@ class PostController extends Controller
 
     	return view('post')->with('post', $singlePost)->with('user', $user);
     }
+
+
+		public function subscribe(Request $request) {
+			$email = $request->input('signUpEmail');
+			$sent = Newsletter::subscribe($email , 'Test list');
+			$error = Newsletter::getLastError();
+			$succeed = Newsletter::lastActionSucceeded(); //returns a bool
+
+			return view('subscribe')->with('email', $email)->with('error', $error)->with('succeed', $succeed)->with('sent', $sent);
+		}
+
 
 
     // api functions
@@ -202,6 +213,9 @@ class PostController extends Controller
         $post->delete();
         return response()->json(['message' => 'Quote deleted'], 200);
     }
+
+
+
 
 
 

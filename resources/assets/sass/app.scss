@@ -88,6 +88,13 @@ body {
   img {
     width: 200px;
   }
+  a {
+    color: white;
+  }
+  a:hover {
+    text-decoration: none;
+    color: grey;
+  }
 }
 .navbar-default {
   //background-color: transparent;
@@ -248,7 +255,7 @@ body {
     input:focus {
         outline:none;
     }
-    button {
+    .submit {
       color: white;
       background-color: rgba(0,0,0,0.3);
       border-color: rgba(255,255,255,0);
@@ -315,11 +322,32 @@ body {
   height: 100vh;
   font-family: 'Roboto', sans-serif;
   overflow: scroll;
+  .pagination {
+    li.active {
+      span {
+        background: $secondary-blue;
+      }
+    }
+    li {
+
+      a {
+        background: $primary-blue;
+        border-color: transparent;
+        color: grey;
+      }
+      span {
+        background: $primary-blue;
+        border-color: transparent;
+        color: grey;
+      }
+    }
+  }
   h1 {
     font-weight: 100;
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
+
 }
 
 

@@ -36,15 +36,11 @@ class DashController extends Controller
       $post = new Post;
       $s3 = Storage::disk('s3');
 
-
-
-
       if (Auth::check()) {
         $post->author = Auth::id();
       }
 
       $image = $request->file('image');
-
 
       $imageFileName = time() . '.' . $image->getClientOriginalExtension();
       $filePath =  $imageFileName;
@@ -59,6 +55,39 @@ class DashController extends Controller
 
       //redirect
       return redirect()->route('post.show', $post->id);
-      
+
     }
+
+
+    public function getEditPost(Request $request, $id) {
+      $singlePost = Post::find($id);
+    	$user = User::find($singlePost->author);
+      return view('dashboard/dash-edit')->with('id', $id )
+                                        ->with('singlePost', $singlePost)
+                                        ->with('user', $user);
+    }
+
+
+    public function putEditPost(Request $request, $id) {
+      $message = 'Post saved!';
+      return view('dashboard/dash-edit')->with('id', $id )
+                                        ->with('message', $message);
+    }
+
+    public function getDeletePost(Request $request, $id) {
+      $singlePost = Post::find($id);
+    	$user = User::find($singlePost->author);
+
+      return view('dashboard/dash-delete')->with('id', $id )
+                                          ->with('singlePost', $singlePost)
+                                          ->with('user', $user);
+    }
+
+    public function deletePost(Request $request, $id) {
+      $message = 'Post Deleted!';
+      return view('dashboard/dash-delete')->with('id', $id )
+                                          ->with('message', $message);
+
+    }
+
 }

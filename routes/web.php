@@ -16,6 +16,8 @@
 // });
 Route::get('/', 'PostController@listPosts')->name('post.listPosts');
 
+Route::post('/', 'PostController@subscribe')->name('post.subscribe');
+
 Auth::routes();
 
 
@@ -26,6 +28,8 @@ Route::get('/category/{id}', 'CategoryController@show')->name('category.show');
 
 Route::get('/recent', 'CategoryController@showRecent')->name('category.showRecent');
 
+
+
 Route::get('/dashboard', 'PostController@index')->name('home');
 
 Route::post('/dashboard', 'PostController@store')->name('post.store');
@@ -35,6 +39,15 @@ Route::get('/dashboard/tutorials', 'DashController@getTutorials')->name('dash.ge
 Route::get('/dashboard/new', 'DashController@newTutorial')->name('dash.newTutorial');
 
 Route::post('/dashboard/new', 'DashController@postTutorial')->name('dash.postTutorial');
+
+Route::get('/dashboard/edit/{id}', 'DashController@getEditPost')->name('dash.getEditPost');
+
+Route::put('/dashboard/edit/{id}', 'DashController@putEditPost')->name('dash.putEditPost');
+
+Route::get('dashboard/delete/{id}', 'DashController@getDeletePost')->name('dash.getDeletePost');
+
+Route::delete('/dashboard/delete/{id}', 'DashController@deletePost')->name('dash.deletePost');
+
 
 Auth::routes();
 

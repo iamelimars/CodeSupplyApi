@@ -3,10 +3,10 @@
 
 @section('menu')
   <div class="menu-item">
-    <a class="" href="">Tutorials</a>
+    <a class="" href="{{route('dash.getTutorials')}}">Tutorials</a>
   </div>
   <div class="menu-item">
-    <a class="active" href="">New Tutorial</a>
+    <a class="active" href="{{route('dash.newTutorial')}}">New Tutorial</a>
   </div>
 
 

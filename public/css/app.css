@@ -8441,6 +8441,15 @@ body {
   width: 200px;
 }
 
+.media a {
+  color: white;
+}
+
+.media a:hover {
+  text-decoration: none;
+  color: grey;
+}
+
 .navbar-default {
   border-color: transparent;
 }
@@ -8615,7 +8624,7 @@ body {
   outline: none;
 }
 
-#footer #signUpForm button {
+#footer #signUpForm .submit {
   color: white;
   background-color: rgba(0, 0, 0, 0.3);
   border-color: rgba(255, 255, 255, 0);
@@ -8679,10 +8688,26 @@ body {
   overflow: scroll;
 }
 
+#dash-main .pagination li.active span {
+  background: #3e454e;
+}
+
+#dash-main .pagination li a {
+  background: #343c45;
+  border-color: transparent;
+  color: grey;
+}
+
+#dash-main .pagination li span {
+  background: #343c45;
+  border-color: transparent;
+  color: grey;
+}
+
 #dash-main h1 {
   font-weight: 100;
   font-size: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 #admin-section #dash-brand {

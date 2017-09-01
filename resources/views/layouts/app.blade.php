@@ -106,13 +106,22 @@
                     <a href="" class="col-md-3">Twitter</a>
                 </div>
                 <div class="col-sm-4">
-                    <form id="signUpForm">
+                  {!! Form::open(array('route' => 'post.subscribe', 'id' => 'signUpForm')) !!}
+                    {{ csrf_field() }}
+                    <div class="col-xs-12">
+                      {{ Form::label('signUpEmail', 'Sign Up For Email Updates:', ['class' => 'col-xs-12']) }}
+                      {{ Form::email('signUpEmail', null, array('class' => 'col-xs-9', 'placeholder' => 'Email')) }}
+                      {{ Form::submit('Submit', ['class' => 'col-xs-3 submit']) }}
+                    </div>
+                  {!! Form::close() !!}
+
+                    {{-- <form id="signUpForm">
                         <div class="col-xs-12">
                             <label for="signUpEmail" class="col-xs-12">Sign Up For Email Updates</label>
                             <input type="email" id="signUpEmail" class="col-xs-9" placeholder="Email">
                             <button type="submit" class="col-xs-3">Submit</button>
                         </div>
-                    </form>
+                    </form> --}}
                 </div>
             </div>
         </div>

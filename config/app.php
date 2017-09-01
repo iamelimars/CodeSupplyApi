@@ -169,6 +169,8 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Spatie\Newsletter\NewsletterServiceProvider::class,
+
 
 
         /*
@@ -233,6 +235,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Newsletter' => Spatie\Newsletter\NewsletterFacade::class,
     ],
 
 ];
