@@ -62,16 +62,37 @@ class DashController extends Controller
     public function getEditPost(Request $request, $id) {
       $singlePost = Post::find($id);
     	$user = User::find($singlePost->author);
+      $message = '';
       return view('dashboard/dash-edit')->with('id', $id )
                                         ->with('singlePost', $singlePost)
-                                        ->with('user', $user);
+                                        ->with('user', $user)
+                                        ->with('message', $message);
     }
 
 
     public function putEditPost(Request $request, $id) {
+      $editedPost = Post::find($id);
+      $editedPost->title = $request->input('title');
+      $editedPost->body = $request->input('body');
+      $editedPost->category_id = $request->input('category');
+      $newImage = $request->input('newImage');
+
+      if ($newImage) {
+        $s3 = Storage::disk('s3');
+        $image = $request->file('image');
+        $imageFileName = time() . '.' . $image->getClientOriginalExtension();
+        $filePath =  $imageFileName;
+        $s3->put($filePath, file_get_contents($image), 'public');
+        $editedPost->image_url = $s3->url($filePath);
+      }
+
+
+      $editedPost->save();
+
       $message = 'Post saved!';
       return view('dashboard/dash-edit')->with('id', $id )
-                                        ->with('message', $message);
+                                        ->with('message', $message)
+                                        ->with('singlePost', $editedPost);
     }
 
     public function getDeletePost(Request $request, $id) {
@@ -85,8 +106,10 @@ class DashController extends Controller
 
     public function deletePost(Request $request, $id) {
       $message = 'Post Deleted!';
-      return view('dashboard/dash-delete')->with('id', $id )
-                                          ->with('message', $message);
+      $post = Post::find($id);
+      $post->delete();
+      return view('dashboard/dash-delete-confirmed')->with('id', $id )
+                                                    ->with('message', $message);
 
     }
 

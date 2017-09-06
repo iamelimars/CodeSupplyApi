@@ -35,9 +35,10 @@ html {
 
 body {
   height: 100%;
-  background: $tan;
+  // background: $tan;
+  background: white;
   //font-family: 'Roboto', sans-serif;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 #app {
@@ -118,6 +119,35 @@ body {
   font-family: 'Oswald', sans-serif;
   font-size: 22px;
 }
+
+#nav-home {
+  height: 400px;
+  @extend .gradient-horizontal-background;
+  .navbar-default {
+    background-color: transparent;
+  }
+  #nav-top {
+    height: 350px;
+    a {
+      color: white;
+      h1 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        font-size: 60px !important;
+        font-weight: 100;
+        font-family: 'Roboto', sans-serif;
+        span {
+
+        }
+      }
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+
 #ad-container {
   //background: $secondary-blue;
   @extend .gradient-horizontal-background;
@@ -264,6 +294,10 @@ body {
     }
   }
 }
+#delete-cancel {
+  background: #e74c3c;
+  border-color: transparent;
+}
 
 #lower-footer {
   height: 100px;
@@ -381,6 +415,14 @@ body {
 
   }
 
+}
+
+
+.delete-container {
+  height: 47vh;
+  h1 {
+    line-height: 43vh;
+  }
 }
 
 

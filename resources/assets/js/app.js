@@ -6,6 +6,8 @@
  */
 
 require('./bootstrap');
+import 'jquery-ui/ui/effect.js';
+import 'jquery-ui/ui/effects/effect-bounce.js';
 
 window.Vue = require('vue');
 
@@ -23,7 +25,21 @@ const app = new Vue({
 
 
 $(document).ready(function() {
-  
+
+    // $('.nav-header').hover(function() {
+    //   $( this ).fadeOut( 100 ),
+    //   $( this ).fadeIn( 500 )
+    //   console.log('hovered');
+    // });
+    $( '.nav-header' ).mouseenter( function() {
+      $('.nav-bounce').delay(50).effect('bounce', {times:3}, 1100);
+      $('.nav-bounce-1').delay(100).effect('bounce', {times:3}, 1100);
+      $('.nav-bounce-2').delay(150).effect('bounce', {times:3}, 1100);
+      $('.nav-bounce-3').delay(200).effect('bounce', {times:3}, 1100);
+    } ).mouseleave( function() {
+      console.log('mouse leave');
+    } );
+
 
     $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
         e.preventDefault();

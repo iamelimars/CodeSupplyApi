@@ -18,6 +18,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
 
 
 
+
 // mix.webpackConfig({
 //     plugins: [
 //         new BrowserSyncPlugin({

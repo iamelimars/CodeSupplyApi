@@ -1,14 +1,14 @@
 
-@extends('layouts.app')
+@extends('layouts.home-layout')
 
 @section('content')
 {{--<div id="hero" style="background-image: url('https://s3.us-east-2.amazonaws.com/iamelimars/city.png')">--}}
     {{--<div id="circle"></div>--}}
 {{--</div>--}}
     <div class="container">
-        <div id="ad-container" class="col-md-12">
+        {{-- <div id="ad-container" class="col-md-12">
 
-        </div>
+        </div> --}}
 
         <div id="recent-section" class="home-section">
             <h3>Most Recent Tutorials</h3>
@@ -96,7 +96,7 @@
                                 <img src="{{$fullstackPost->image_url}}" alt="...">
                                 <div class="caption">
                                     <a href="{{route('post.show', $fullstackPost->id)}}">{{ $fullstackPost->title }}</a>
-                                    
+
                                 </div>
                             </div>
                             </a>

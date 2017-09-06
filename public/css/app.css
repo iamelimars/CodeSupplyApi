@@ -8365,6 +8365,7 @@ button.close {
 
 .gradient-horizontal-background,
 .navbar-default,
+#nav-home,
 #ad-container,
 .home-section #view-more-btn {
   background: #e58957;
@@ -8384,8 +8385,8 @@ html {
 
 body {
   height: 100%;
-  background: #f4f3f4;
-  font-family: 'Oswald', sans-serif;
+  background: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 .full {
@@ -8471,6 +8472,34 @@ body {
   color: #FFF;
   font-family: 'Oswald', sans-serif;
   font-size: 22px;
+}
+
+#nav-home {
+  height: 400px;
+}
+
+#nav-home .navbar-default {
+  background-color: transparent;
+}
+
+#nav-home #nav-top {
+  height: 350px;
+}
+
+#nav-home #nav-top a {
+  color: white;
+}
+
+#nav-home #nav-top a h1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 60px !important;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+}
+
+#nav-home #nav-top a:hover {
+  text-decoration: none;
 }
 
 #ad-container {
@@ -8632,6 +8661,11 @@ body {
   border-style: solid;
 }
 
+#delete-cancel {
+  background: #e74c3c;
+  border-color: transparent;
+}
+
 #lower-footer {
   height: 100px;
   width: 100vw;
@@ -8727,6 +8761,14 @@ body {
 #admin-section #admin-panel {
   background-color: #343c45;
   height: 100vh;
+}
+
+.delete-container {
+  height: 47vh;
+}
+
+.delete-container h1 {
+  line-height: 43vh;
 }
 
 /*  bhoechie tab */
