@@ -115,7 +115,7 @@
 
         <div class="clearfix"></div>
 
-        <div class="" id="footer">
+        <div class="search-footer" id="footer">
             <div class="container">
                 <div class="col-sm-8 contact-section hidden-xs">
                     <a href="" class="col-md-3">Contact</a>

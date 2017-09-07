@@ -8364,10 +8364,12 @@ button.close {
 }
 
 .gradient-horizontal-background,
+#search-container,
 .navbar-default,
 #nav-home,
 #ad-container,
-.home-section #view-more-btn {
+.home-section #view-more-btn,
+.search-footer {
   background: #e58957;
   /* Old browsers */
   /* FF3.6-15 */
@@ -8678,6 +8680,48 @@ body {
   width: 100%;
   text-align: center;
   font-size: 14px;
+}
+
+div#footer.search-footer {
+  background: #e58957;
+  background: -webkit-gradient(linear, left top, right top, from(#e58957), to(#8f76db));
+  background: linear-gradient(to right, #e58957 0%, #8f76db 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e58957', endColorstr='#8f76db',GradientType=0 );
+}
+
+#search-results li {
+  color: rgba(5, 5, 5, 0.4);
+}
+
+#search-results em {
+  color: white;
+  font-style: normal;
+}
+
+#search-results a {
+  color: rgba(5, 5, 5, 0.2);
+}
+
+#search-form {
+  background-color: rgba(1, 1, 1, 0.3);
+  height: 40px;
+  border-radius: 20px;
+}
+
+#search-form a {
+  color: white;
+}
+
+#search-form a i {
+  line-height: 40px;
+}
+
+#search-box {
+  height: 40px;
+  background: transparent;
+  border-color: transparent;
+  outline: none;
+  color: white;
 }
 
 #dash-sidebar {

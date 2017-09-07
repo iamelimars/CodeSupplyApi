@@ -85,6 +85,10 @@ body {
   }
 }
 
+#search-container {
+  @extend .gradient-horizontal-background;
+}
+
 .media {
   img {
     width: 200px;
@@ -311,11 +315,52 @@ body {
     font-size: 14px;
   }
 }
+div#footer.search-footer {
+    background: #e58957;
+    background: -moz-linear-gradient(left, #e58957 0%, #8f76db 100%);
+    background: -webkit-linear-gradient(left, #e58957 0%,#8f76db 100%);
+    background: linear-gradient(to right, #e58957 0%,#8f76db 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e58957', endColorstr='#8f76db',GradientType=0 );
+}
+.search-footer  {
+  @extend .gradient-horizontal-background;
+}
 
+#search-results {
+  li {
+    color: rgba(5, 5, 5, 0.4);
+  }
+  em {
+    color: white;
+    font-style: normal;
+  }
+  a {
+    color: rgba(5, 5, 5, 0.2);
+  }
+}
+#search-form {
+  background-color: rgba(1, 1, 1, 0.3);
+  height: 40px;
+  border-radius: 20px;
+  a {
+    color: white;
+    i {
+      line-height: 40px;
+    }
+  }
 
+}
 
+#search-box {
+  height: 40px;
+  background: transparent;
 
+  border-color: transparent;
+  outline: none;
+  color: white;
+  // border-radius: 20px;
 
+}
 
 // Home section
 

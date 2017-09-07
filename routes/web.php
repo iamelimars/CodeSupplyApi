@@ -49,6 +49,8 @@ Route::get('dashboard/delete/{id}', 'DashController@getDeletePost')->name('dash.
 Route::delete('/dashboard/delete/{id}', 'DashController@deletePost')->name('dash.deletePost');
 
 
+Route::get('/search', 'SearchController@index')->name('search');
+
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
