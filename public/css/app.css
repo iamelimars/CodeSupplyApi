@@ -8365,7 +8365,6 @@ button.close {
 
 .gradient-horizontal-background,
 #search-container,
-.navbar-default,
 #ad-container {
   background: #e58957;
   /* Old browsers */
@@ -8452,6 +8451,7 @@ body {
 }
 
 .navbar-default {
+  background-color: lightcoral;
   border-color: transparent;
 }
 
@@ -8656,10 +8656,28 @@ body {
 #items .thumbnail {
   background-color: white;
   border-color: white;
+  margin-bottom: 80px;
+  margin-top: 30px;
+  font-weight: 100;
+  -webkit-transition: box-shadow 1.5s;
+  /* Safari */
+  -webkit-transition: -webkit-box-shadow 1.5s;
+  transition: -webkit-box-shadow 1.5s;
+  transition: box-shadow 1.5s;
+  transition: box-shadow 1.5s, -webkit-box-shadow 1.5s;
 }
 
 #items .thumbnail a {
   color: black;
+}
+
+#items .thumbnail:hover {
+  -webkit-box-shadow: 0 1px 5px #dcdcdc;
+          box-shadow: 0 1px 5px #dcdcdc;
+}
+
+#items #view-more-btn {
+  margin-top: 0;
 }
 
 #about {

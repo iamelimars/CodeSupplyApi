@@ -67,7 +67,7 @@
             <div id="items">
                 <div class="row">
                     @foreach ($backendPosts as $backendPost)
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-md-6">
                             <a href="{{route('post.show', $backendPost->id)}}">
                             <div class="thumbnail">
                                 <img src="{{ $backendPost->image_url }}" alt="...">

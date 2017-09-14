@@ -107,8 +107,9 @@ body {
   }
 }
 .navbar-default {
-  //background-color: transparent;
-  @extend .gradient-horizontal-background;
+  background-color: lightcoral;
+  // @extend .gradient-horizontal-background;
+
   border-color: transparent;
   .navbar-nav > li > a {
     color: white;
@@ -298,12 +299,20 @@ body {
   .thumbnail {
     background-color: white;
     border-color: white;
-    img {
-
-    }
+    margin-bottom: 80px;
+    margin-top: 30px;
+    font-weight: 100;
+    -webkit-transition: box-shadow 1.5s; /* Safari */
+    transition: box-shadow 1.5s;
     a {
       color: black;
     }
+  }
+  .thumbnail:hover {
+    box-shadow: 0 1px 5px #dcdcdc;
+  }
+  #view-more-btn {
+   margin-top: 0;
   }
 }
 

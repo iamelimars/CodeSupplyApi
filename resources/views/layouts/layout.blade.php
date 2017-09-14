@@ -82,10 +82,9 @@
         {{--  <div class="header__bg"></div>  --}}
             <div class="container">
                 <div class="col-sm-8 contact-section">
-                    <a href="" class="col-md-2 col-sm-12 text-center">CONTACT</a>
-                    <a href="" class="col-md-2 col-sm-12 text-center">INSTAGRAM</a>
-                    <a href="" class="col-md-2 col-sm-12 text-center">GITHUB</a>
-                    <a href="" class="col-md-2 col-sm-12 text-center">TWITTER</a>
+                    <a href="mailto:codesupplyio@gmail.com?Subject=CodeSupply.io" class="col-md-4 col-sm-12 text-center"><i class="fa fa-envelope" aria-hidden="true"></i> - CONTACT</a>
+                    <a href="https://www.instagram.com/codesupply.io/?hl=en" class="col-md-2 4ol-sm-12 text-center"><i class="fa fa-instagram" aria-hidden="true"></i> - IG</a>
+                    <a href="https://github.com/CodeSupplyio" class="col-md-4 col-sm-12 text-center"><i class="fa fa-github" aria-hidden="true"></i> - GITHUB</a>
                     {{--  <a id="open-popup" class="col-md-4 text-center">Subscribe to Our Mailing List</a>  --}}
                 </div>
                 <div class="col-sm-4">

@@ -3,16 +3,16 @@
 @section('content')
     <div class="full">
     <div class="container">
-        <div id="ad-container" class="col-md-12">
-        </div>
+        {{--  <div id="ad-container" class="col-md-12">
+        </div>  --}}
         @foreach($categoryTitle as $category)
             <h1 class="col-xs-12 text-center">{{$category->title}}</h1>
         @endforeach
             <div id="items">
-              @foreach ($posts->chunk(4) as $mostRecent )
+              @foreach ($posts->chunk(2) as $mostRecent )
                 <div class="row">
                     @foreach ($mostRecent as $post)
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-md-6">
                             <a href="{{route('post.show', $post->id)}}">
                                 <div class="thumbnail">
                                     <img src="{{ $post->image_url }}" alt="{{ $post->title }}">
