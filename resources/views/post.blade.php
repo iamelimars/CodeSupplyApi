@@ -8,8 +8,11 @@
 	<div class="container" id="content-container">
 		<img class="" src="{{ $post->image_url }}" alt="">
 		<div class="container">
-			<h1>{{ $post->title }}</h1>
-			<h5>{{ $user->name }} / {{ $post->created_at->format('M d Y') }}</h5>
+			<div class="title-container">
+				<h5>{{ $user->name }} / {{ $post->created_at->format('M d Y') }}</h5>
+				<h1>{{ $post->title }}</h1>
+			</div>
+			
 			{!! $post->body !!}
 		</div>
 		<div class="container">

@@ -48,22 +48,12 @@ function renderHits(content) {
 
   $('#search-results').html(function() {
     return $.map(content.hits, function(hit) {
-      // var p = document.createElement('h4');
-      // p.innerHtml =
-      // var txt = document.innerHtml(hit._highlightResult.title.value);
-      // p.appendChild(txt);
-      // var div = $("<div>", {"class": "text-center"});
-      // var anchor = $("<a>", {"href": 'route("post.show", ' hit._highlightResult.id.value ')'});
-      // var title = $("<h4>", {"text": hit._highlightResult.title.value});
 
-      // anchor.appendChild(title);
-      // div.appendChild(title);
-      // return p;
 
       var route = "//http://localhost:3000/post/";
 
 // {{ route(' + route + ', ' + hit.id + ') }}
-      return '<div class="text-center col-xs-12"><a href="//localhost:3000/post/'+ hit.id +'"><h4>' + hit._highlightResult.title.value + '</h4></a></div>';
+      return '<div class=" col-xs-12"><a href="//localhost:3000/post/'+ hit.id +'"><h4>' + hit._highlightResult.title.value + '</h4></a></div>';
 
     });
   });
@@ -74,9 +64,37 @@ $('#search-box').on('keyup', function() {
         .search();
 });
 
-// helper.search();
 
 $(document).ready(function() {
+
+
+  $('#signUpForm').submit(function (e) {
+      e.preventDefault();
+
+      $.ajax({
+          url: 'http://eepurl.com/c2Ot7z',
+          type: 'POST',
+          data: $('#signUpForm').serialize(),
+          dataType: 'jsonp',
+          contentType: "application/json; charset=utf-8",
+          success: function (data) {
+             if (data['result'] != "success") {
+                  //ERROR
+                  console.log('Errorrr' + data['msg']);
+             } else {
+               console.log('Successfully subscribed');
+                  //SUCCESS - Do what you like here
+             }
+          }
+      });
+  });
+
+    // function showMailingPopUp() {
+    //   require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us15.list-manage.com","uuid":"34cd52ce8f2d6ce1e73558922","lid":"db2006c569"}) })
+    //   document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    // };
+    //
+    // document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
 
     $( '.nav-header' ).mouseenter( function() {
       $('.nav-bounce').delay(50).effect('bounce', {times:3}, 1100);

@@ -78,8 +78,38 @@
 
         @yield('content')
 
+        <div class="" id="footer">
+        {{--  <div class="header__bg"></div>  --}}
+            <div class="container">
+                <div class="col-sm-8 contact-section">
+                    <a href="" class="col-md-2 col-sm-12 text-center">CONTACT</a>
+                    <a href="" class="col-md-2 col-sm-12 text-center">INSTAGRAM</a>
+                    <a href="" class="col-md-2 col-sm-12 text-center">GITHUB</a>
+                    <a href="" class="col-md-2 col-sm-12 text-center">TWITTER</a>
+                    {{--  <a id="open-popup" class="col-md-4 text-center">Subscribe to Our Mailing List</a>  --}}
+                </div>
+                <div class="col-sm-4">
 
-        <div id="footer">
+                    <form action="//codesupplyio.us16.list-manage.com/subscribe/post?u=8f11746183ea24a92ef5609d9&amp;id=8a40ed0bb4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+                    {{--  <form id="signUpForm">  --}}
+                      {{ csrf_field() }}
+                        <div class="col-xs-12">
+                            <label for="signUpEmail" class="col-xs-12">Sign Up For Email Updates</label>
+                            <input type="email" id="mce-EMAIL signUpEmail" name="EMAIL" class="col-xs-9 email" placeholder="Email" required>
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8f11746183ea24a92ef5609d9_8a40ed0bb4" tabindex="-1" value=""></div>
+                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="col-xs-3 submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="lower-footer">
+            <h4>2017 Code Supply Media</h4>
+        </div>
+
+
+        {{--  <div id="footer">
             <div class="container">
                 <div class="col-sm-8 contact-section hidden-xs">
                     <a href="" class="col-md-3">Contact</a>
@@ -101,7 +131,7 @@
         </div>
         <div id="lower-footer">
             <h4>2017 Code Supply Media</h4>
-        </div>
+        </div>  --}}
 
     </div>
 

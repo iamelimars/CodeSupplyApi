@@ -19,7 +19,7 @@ class CategoryController extends Controller
     }
 
     public function showRecent() {
-        $recentPosts = Post::orderBy('created_at', 'desc')->paginate(4);
+        $recentPosts = Post::orderBy('created_at', 'desc')->paginate(16);
         return view('recent')->with(compact('recentPosts'));
     }
 }

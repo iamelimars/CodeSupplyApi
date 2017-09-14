@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto:100,300,400);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto:100,300,400);@import url(https://fonts.googleapis.com/css?family=Dancing+Script);@charset "UTF-8";
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -8366,10 +8366,7 @@ button.close {
 .gradient-horizontal-background,
 #search-container,
 .navbar-default,
-#nav-home,
-#ad-container,
-.home-section #view-more-btn,
-.search-footer {
+#ad-container {
   background: #e58957;
   /* Old browsers */
   /* FF3.6-15 */
@@ -8389,6 +8386,7 @@ body {
   height: 100%;
   background: white;
   font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 .full {
@@ -8477,19 +8475,28 @@ body {
 }
 
 #nav-home {
-  height: 400px;
+  height: 300px;
+  background-color: lightcoral;
 }
 
-#nav-home .navbar-default {
-  background-color: transparent;
+#nav-home .navbar.navbar-default.navbar-static-top {
+  background: transparent;
 }
 
 #nav-home #nav-top {
-  height: 350px;
+  height: 250px;
 }
 
 #nav-home #nav-top a {
   color: white;
+}
+
+#nav-home #nav-top a h2 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 45px !important;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
 }
 
 #nav-home #nav-top a h1 {
@@ -8502,6 +8509,13 @@ body {
 
 #nav-home #nav-top a:hover {
   text-decoration: none;
+}
+
+#nav-top h4 {
+  font-size: 17px;
+  color: white;
+  font-weight: 100;
+  margin-top: -7px;
 }
 
 #ad-container {
@@ -8518,14 +8532,37 @@ body {
   padding-right: 30px !important;
 }
 
+.header__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9d2f), to(#ff6126));
+  background-image: linear-gradient(#ff9d2f, #ff6126);
+  -webkit-transform: skewY(-6deg);
+          transform: skewY(-6deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
 .home-section {
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.home-section h3 {
+  font-weight: 100;
 }
 
 .home-section #view-more-btn {
   margin-top: 50px;
+  background-color: #3e454e;
   font-size: 15px;
+  font-weight: 100;
+  border-radius: 1px;
   border-color: white;
   color: white;
 }
@@ -8590,8 +8627,30 @@ body {
   color: black !important;
 }
 
+#mc_embed_signup {
+  margin-top: 100px;
+}
+
+#mc_embed_signup label {
+  width: 100%;
+}
+
+#mc_embed_signup #mce-EMAIL {
+  background: #3e454e;
+  border: none;
+  height: 40px;
+  width: 200px;
+}
+
+#mc_embed_signup #mc-embedded-subscribe {
+  height: 40px;
+  border: none;
+  color: white;
+  margin-left: -3px;
+}
+
 #items {
-  margin-bottom: 300px;
+  margin-bottom: 200px;
 }
 
 #items .thumbnail {
@@ -8610,9 +8669,11 @@ body {
 
 #footer {
   font-weight: 100;
+  margin-top: 150px;
   height: 250px;
   width: 100vw;
   position: relative;
+  background: lightcoral;
 }
 
 #footer .contact-section {
@@ -8629,7 +8690,7 @@ body {
   color: #FFF;
 }
 
-#footer #signUpForm {
+#footer #mc-embedded-subscribe-form {
   height: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8639,23 +8700,23 @@ body {
           align-items: center;
 }
 
-#footer #signUpForm label {
+#footer #mc-embedded-subscribe-form label {
   color: white;
   font-weight: 100;
 }
 
-#footer #signUpForm input {
+#footer #mc-embedded-subscribe-form input {
   background-color: rgba(255, 255, 255, 0.4);
   border-color: rgba(255, 255, 255, 0);
   border-style: solid;
   height: 40px;
 }
 
-#footer #signUpForm input:focus {
+#footer #mc-embedded-subscribe-form input:focus {
   outline: none;
 }
 
-#footer #signUpForm .submit {
+#footer #mc-embedded-subscribe-form .submit {
   color: white;
   background-color: rgba(0, 0, 0, 0.3);
   border-color: rgba(255, 255, 255, 0);
@@ -8682,11 +8743,10 @@ body {
   font-size: 14px;
 }
 
-div#footer.search-footer {
-  background: #e58957;
-  background: -webkit-gradient(linear, left top, right top, from(#e58957), to(#8f76db));
-  background: linear-gradient(to right, #e58957 0%, #8f76db 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e58957', endColorstr='#8f76db',GradientType=0 );
+#search-container {
+  min-height: 50vh;
+  background: lightcoral;
+  margin-bottom: -150px;
 }
 
 #search-results li {
@@ -8722,6 +8782,20 @@ div#footer.search-footer {
   border-color: transparent;
   outline: none;
   color: white;
+}
+
+.pagination > .active > span {
+  background: grey;
+  border-color: grey;
+}
+
+.pagination > .active > span:hover {
+  background: black;
+  border-color: black;
+}
+
+.pagination > li > a {
+  color: grey;
 }
 
 #dash-sidebar {

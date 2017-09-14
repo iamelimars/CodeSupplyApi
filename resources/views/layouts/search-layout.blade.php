@@ -115,33 +115,34 @@
 
         <div class="clearfix"></div>
 
-        <div class="search-footer" id="footer">
+       <div class="" id="footer">
+        {{--  <div class="header__bg"></div>  --}}
             <div class="container">
-                <div class="col-sm-8 contact-section hidden-xs">
-                    <a href="" class="col-md-3">Contact</a>
-                    <a href="" class="col-md-3">Instagram</a>
-                    <a href="" class="col-md-3">Github</a>
-                    <a href="" class="col-md-3">Twitter</a>
+                <div class="col-sm-8 contact-section">
+                    <a href="" class="col-md-2 col-sm-12 text-center">CONTACT</a>
+                    <a href="" class="col-md-2 col-sm-12 text-center">INSTAGRAM</a>
+                    <a href="" class="col-md-2 col-sm-12 text-center">GITHUB</a>
+                    <a href="" class="col-md-2 col-sm-12 text-center">TWITTER</a>
+                    {{--  <a id="open-popup" class="col-md-4 text-center">Subscribe to Our Mailing List</a>  --}}
                 </div>
                 <div class="col-sm-4">
-                  {!! Form::open(array('route' => 'post.subscribe', 'id' => 'signUpForm')) !!}
-                    {{ csrf_field() }}
-                    <div class="col-xs-12">
-                      {{ Form::label('signUpEmail', 'Sign Up For Email Updates:', ['class' => 'col-xs-12']) }}
-                      {{ Form::email('signUpEmail', null, array('class' => 'col-xs-9', 'placeholder' => 'Email')) }}
-                      {{ Form::submit('Submit', ['class' => 'col-xs-3 submit']) }}
-                    </div>
-                  {!! Form::close() !!}
 
-                    {{-- <form id="signUpForm">
+                    <form action="//codesupplyio.us16.list-manage.com/subscribe/post?u=8f11746183ea24a92ef5609d9&amp;id=8a40ed0bb4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+                    {{--  <form id="signUpForm">  --}}
+                      {{ csrf_field() }}
                         <div class="col-xs-12">
                             <label for="signUpEmail" class="col-xs-12">Sign Up For Email Updates</label>
-                            <input type="email" id="signUpEmail" class="col-xs-9" placeholder="Email">
-                            <button type="submit" class="col-xs-3">Submit</button>
+                            <input type="email" id="mce-EMAIL signUpEmail" name="EMAIL" class="col-xs-9 email" placeholder="Email" required>
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8f11746183ea24a92ef5609d9_8a40ed0bb4" tabindex="-1" value=""></div>
+                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="col-xs-3 submit">
                         </div>
-                    </form> --}}
+                    </form>
                 </div>
             </div>
+        </div>
+        <div id="lower-footer">
+            <h4>2017 Code Supply Media</h4>
         </div>
         {{--<div id="lower-footer">--}}
             {{--<h4>2017 Code Supply Media</h4>--}}

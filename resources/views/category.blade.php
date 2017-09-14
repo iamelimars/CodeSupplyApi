@@ -9,22 +9,22 @@
             <h1 class="col-xs-12 text-center">{{$category->title}}</h1>
         @endforeach
             <div id="items">
+              @foreach ($posts->chunk(4) as $mostRecent )
                 <div class="row">
-                    @foreach ($posts as $post)
+                    @foreach ($mostRecent as $post)
                         <div class="col-sm-6 col-md-3">
                             <a href="{{route('post.show', $post->id)}}">
                                 <div class="thumbnail">
-                                    <img src="{{ $post->image_url }}" alt="...">
+                                    <img src="{{ $post->image_url }}" alt="{{ $post->title }}">
                                     <div class="caption">
                                         <a class="" href="{{route('post.show', $post->id)}}">{{ $post->title }}</a>
-                                        {{--<p>{{ $post->body }} </p>--}}
-                                        {{--<p><a href="#" class="btn btn-default" role="button">Button</a></p>--}}
                                     </div>
                                 </div>
                             </a>
                         </div>
                     @endforeach
                 </div>
+              @endforeach
                 {{--<a id="view-more-btn" class="col-xs-4 col-xs-offset-4 btn btn-lg text-center" href="">View More</a>--}}
 
                 {{--{{ $posts->lastPage() }}--}}

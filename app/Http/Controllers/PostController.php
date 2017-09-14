@@ -110,9 +110,11 @@ class PostController extends Controller
 
 		public function subscribe(Request $request) {
 			$email = $request->input('signUpEmail');
-			$sent = Newsletter::subscribe($email , 'Test list');
+			// $sent = Newsletter::subscribe($email);
+			$sent = Newsletter::subscribe('rincewind@discworld.com', ['firstName'=>'Rince', 'lastName'=>'Wind'], 'subscribers');
 			$error = Newsletter::getLastError();
 			$succeed = Newsletter::lastActionSucceeded(); //returns a bool
+
 
 			return view('subscribe')->with('email', $email)->with('error', $error)->with('succeed', $succeed)->with('sent', $sent);
 		}
