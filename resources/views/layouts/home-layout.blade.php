@@ -136,19 +136,19 @@
 
 <!--End mc_embed_signup-->
 
-    
+
         <div class="" id="footer">
         {{--  <div class="header__bg"></div>  --}}
             <div class="container">
-                <div class="col-sm-8 contact-section">
-                    <a href="mailto:codesupplyio@gmail.com?Subject=CodeSupply.io" class="col-md-4 col-sm-12 text-center"><i class="fa fa-envelope" aria-hidden="true"></i> - CONTACT</a>
-                    <a href="https://www.instagram.com/codesupply.io/?hl=en" class="col-md-2 4ol-sm-12 text-center"><i class="fa fa-instagram" aria-hidden="true"></i> - IG</a>
-                    <a href="https://github.com/CodeSupplyio" class="col-md-4 col-sm-12 text-center"><i class="fa fa-github" aria-hidden="true"></i> - GITHUB</a>
+                <div class="col-lg-8 contact-section">
+                    <a href="mailto:codesupplyio@gmail.com?Subject=CodeSupply.io" class="col-xs-12 text-center"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/codesupply.io/?hl=en" class="col-xs-12 text-center"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://github.com/CodeSupplyio" class="col-xs-12 text-center"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
                     {{--  <a href="" class="col-md-2 col-sm-12 text-center">TWITTER</a>  --}}
                     {{--  <a id="open-popup" class="col-md-4 text-center">Subscribe to Our Mailing List</a>  --}}
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-lg-4">
                   {{-- {!! Form::open(array('route' => 'post.subscribe', 'id' => 'signUpForm')) !!}
                   {!! Form::open(array('id' => 'signUpForm')) !!}
                     {{ csrf_field() }}
@@ -158,7 +158,7 @@
                       {{ Form::submit('Submit', ['class' => 'col-xs-3 submit']) }}
                     </div>
                   {!! Form::close() !!} --}}
-                    <form action="//codesupplyio.us16.list-manage.com/subscribe/post?u=8f11746183ea24a92ef5609d9&amp;id=8a40ed0bb4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <form action="//codesupplyio.us16.list-manage.com/subscribe/post?u=8f11746183ea24a92ef5609d9&amp;id=8a40ed0bb4" method="post"  id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate col-xs-12" target="_blank" novalidate>
 
                     {{--  <form id="signUpForm">  --}}
                       {{ csrf_field() }}
@@ -181,7 +181,7 @@
     </div>
     {{--  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
     <script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"8f11746183ea24a92ef5609d9","lid":"8a40ed0bb4"}) })</script>  --}}
-   
+
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
     <script type="text/javascript">
       require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"8f11746183ea24a92ef5609d9","lid":"8a40ed0bb4"}) });

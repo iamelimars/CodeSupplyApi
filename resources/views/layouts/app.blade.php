@@ -12,6 +12,8 @@
 
 
     <!-- Styles -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/prism.css') }}">
 
@@ -103,24 +105,15 @@
         <div class="" id="footer">
         {{--  <div class="header__bg"></div>  --}}
             <div class="container">
-                <div class="col-sm-8 contact-section">
-                    <a href="mailto:codesupplyio@gmail.com?Subject=CodeSupply.io" class="col-md-4 col-sm-12 text-center"><i class="fa fa-envelope" aria-hidden="true"></i> - CONTACT</a>
-                    <a href="https://www.instagram.com/codesupply.io/?hl=en" class="col-md-2 4ol-sm-12 text-center"><i class="fa fa-instagram" aria-hidden="true"></i> - IG</a>
-                    <a href="https://github.com/CodeSupplyio" class="col-md-4 col-sm-12 text-center"><i class="fa fa-github" aria-hidden="true"></i> - GITHUB</a>
+                <div class="col-lg-8 contact-section">
+                    <a href="mailto:codesupplyio@gmail.com?Subject=CodeSupply.io" class="col-xs-12 text-center"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/codesupply.io/?hl=en" class="col-xs-12 text-center"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://github.com/CodeSupplyio" class="col-xs-12 text-center"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                    {{--  <a href="" class="col-md-2 col-sm-12 text-center">TWITTER</a>  --}}
                     {{--  <a id="open-popup" class="col-md-4 text-center">Subscribe to Our Mailing List</a>  --}}
                 </div>
-                {{--  <div class="col-sm-4" id="mc_embed_signup">
-                    <form action="//codesupplyio.us16.list-manage.com/subscribe/post?u=8f11746183ea24a92ef5609d9&amp;id=8a40ed0bb4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                        <label for="mce-EMAIL">Subscribe to our mailing list</label>
-                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8f11746183ea24a92ef5609d9_8a40ed0bb4" tabindex="-1" value=""></div>
-                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                        </div>
-                    </form>
-                </div>  --}}
-                <div class="col-sm-4">
+
+                <div class="col-lg-4">
                   {{-- {!! Form::open(array('route' => 'post.subscribe', 'id' => 'signUpForm')) !!}
                   {!! Form::open(array('id' => 'signUpForm')) !!}
                     {{ csrf_field() }}
@@ -130,7 +123,7 @@
                       {{ Form::submit('Submit', ['class' => 'col-xs-3 submit']) }}
                     </div>
                   {!! Form::close() !!} --}}
-                    <form action="//codesupplyio.us16.list-manage.com/subscribe/post?u=8f11746183ea24a92ef5609d9&amp;id=8a40ed0bb4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <form action="//codesupplyio.us16.list-manage.com/subscribe/post?u=8f11746183ea24a92ef5609d9&amp;id=8a40ed0bb4" method="post"  id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate col-xs-12" target="_blank" novalidate>
 
                     {{--  <form id="signUpForm">  --}}
                       {{ csrf_field() }}
@@ -168,7 +161,7 @@
                     </div>
                   {!! Form::close() !!}
 
-                    
+
                 </div>
             </div>
         </div>  --}}

@@ -64,8 +64,8 @@ body {
   background: white;
   box-shadow: 0 1px 5px #dcdcdc;
 
-  
-  
+
+
   img {
     width: 100%;
   }
@@ -117,7 +117,7 @@ body {
 }
 
 .navbar-home {
-  background-color: transparent;
+  // background-color: transparent;
   border-color: transparent;
 }
 
@@ -139,7 +139,7 @@ body {
   //   background-color: transparent;
   // }
   .navbar.navbar-default.navbar-static-top {
-    background: transparent;
+    background: lightcoral;
 }
   #nav-top {
     height: 250px;
@@ -323,10 +323,10 @@ body {
 
 
 #footer {
-  
+
   font-weight: 100;
   margin-top: 150px;
-  height: 250px;
+  min-height: 250px;
   width: 100vw;
   position: relative;
   //background: $primary-blue;

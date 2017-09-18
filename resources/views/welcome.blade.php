@@ -25,6 +25,7 @@
                             </div>
                             </a>
                         </div>
+                        
                     @endforeach
                 </div>
                 <a id="view-more-btn" class="col-xs-4 col-xs-offset-4 btn btn-lg text-center" href="{{route('category.showRecent', $latestPost->id)}}">View More</a>

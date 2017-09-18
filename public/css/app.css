@@ -8460,7 +8460,6 @@ body {
 }
 
 .navbar-home {
-  background-color: transparent;
   border-color: transparent;
 }
 
@@ -8480,7 +8479,7 @@ body {
 }
 
 #nav-home .navbar.navbar-default.navbar-static-top {
-  background: transparent;
+  background: lightcoral;
 }
 
 #nav-home #nav-top {
@@ -8688,7 +8687,7 @@ body {
 #footer {
   font-weight: 100;
   margin-top: 150px;
-  height: 250px;
+  min-height: 250px;
   width: 100vw;
   position: relative;
   background: lightcoral;
